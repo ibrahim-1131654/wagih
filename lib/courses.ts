@@ -7,6 +7,10 @@ export type Course = {
   thumbnail: string
 }
 
+export function getCourse(id: string): Course | undefined {
+  return courses.find((course) => course.id === id)
+}
+
 export const courses: Course[] = [
   {
     id: "web-development",
